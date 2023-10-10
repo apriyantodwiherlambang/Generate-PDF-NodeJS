@@ -18,11 +18,12 @@ function generateHeader(doc) {
     .image("logo.png", 50, 45, { width: 50 })
     .fillColor("#444444")
     .fontSize(20)
-    .text("ACME Inc.", 110, 57)
+    .text("Toko Emas", 110, 50)
+    .text("Murni Padang.", 110, 75)
     .fontSize(10)
-    .text("ACME Inc.", 200, 50, { align: "right" })
-    .text("123 Main Street", 200, 65, { align: "right" })
-    .text("New York, NY, 10025", 200, 80, { align: "right" })
+    .text("Toko Emas Murni Padang.", 200, 50, { align: "right" })
+    .text("Jl. Pasar Raya No.4A, Barat III, Kp. Jao.", 200, 65, { align: "right" })
+    .text("Kota Padang, Sumatera Barat - 25112", 200, 80, { align: "right" })
     .moveDown();
 }
 
@@ -142,7 +143,7 @@ function generateFooter(doc) {
   doc
     .fontSize(10)
     .text(
-      "Payment is due within 15 days. Thank you for your business.",
+      "Terimakasih sudah berbelanja di Toko Emas Murni Padang.",
       50,
       780,
       { align: "center", width: 500 }
@@ -177,7 +178,7 @@ function generateHr(doc, y) {
 }
 
 function formatCurrency(cents) {
-  return "$" + (cents / 100).toFixed(2);
+  return "Rp " + cents.toLocaleString("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
 function formatDate(date) {
